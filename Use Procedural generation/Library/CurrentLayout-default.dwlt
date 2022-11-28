@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 42
+  controlID: 68
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 342}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 43
+  controlID: 69
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 64
+  controlID: 142
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -435,9 +435,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 0}
+    m_Target: {x: -0.49499965, y: -18.805433, z: 19.940027}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: -0.49499965, y: -18.805433, z: 19.940027}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -484,13 +484,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Target: {x: -0.3804185, y: 0.018252395, z: -0.0075940792, w: -0.9246625}
     speed: 2
-    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Value: {x: -0.3804185, y: 0.018252395, z: -0.007594079, w: -0.9246624}
   m_Size:
-    m_Target: 10
+    m_Target: 14.956792
     speed: 2
-    m_Value: 10
+    m_Value: 14.956792
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1510,7 +1510,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 17874
+  m_LastSelectedObjectID: -87760
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1539,9 +1539,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: ba0d0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 82faffff
+      m_ExpandedIDs: 52fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1603,22 +1603,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Modules/Procedure Generation/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Modules/Procedure Generation/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\GitLabRepository\Procedural-generation\Use Procedural generation
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: da4b0000
-    m_LastClickedID: 19418
-    m_ExpandedIDs: 00000000da4b000000ca9a3b
+    m_SelectedIDs: b43e0000
+    m_LastClickedID: 16052
+    m_ExpandedIDs: 00000000a23e0000a43e0000ac3e0000ae3e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1646,7 +1646,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 00000000a23e0000a43e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1673,7 +1673,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000000000000447000016480000805000005c4f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
