@@ -1,10 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
-using System.Drawing;
 
-//[RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
 public class GeneratingPlane : MonoBehaviour
 {
     public int Size = 0;
@@ -69,7 +65,6 @@ public class GeneratingPlane : MonoBehaviour
             }
         }
 
-        //Создание треугольников
         for (int z = 0, triangleIndex = 0, VertIndex = 0; z < Size; z++, VertIndex++)
         {
             for (int x = 0; x < Size; x++, triangleIndex+=6, VertIndex++)
@@ -92,18 +87,6 @@ public class GeneratingPlane : MonoBehaviour
         _mesh.triangles = _triangles;
         _mesh.uv = _uvs;
         _mesh.RecalculateNormals();
-    }
-
-    private void OnDrawGizmos()
-    {
-        if (_vertices != null && _vertices.Length != 0) 
-        {
-            for (int i = 0; i < _vertices.Length; i++)
-            {
-                Gizmos.DrawWireSphere(_vertices[i], 0.1f);
-            }
-                
-        }
     }
 
     private void TestPlane()

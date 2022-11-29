@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 68
+  controlID: 81
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 342}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 69
+  controlID: 82
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 142
+  controlID: 129
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -435,9 +435,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.49499965, y: -18.805433, z: 19.940027}
+    m_Target: {x: -11.7242985, y: -9.51654, z: 4.0915804}
     speed: 2
-    m_Value: {x: -0.49499965, y: -18.805433, z: 19.940027}
+    m_Value: {x: -11.7242985, y: -9.51654, z: 4.0915804}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -484,20 +484,20 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.3804185, y: 0.018252395, z: -0.0075940792, w: -0.9246625}
+    m_Target: {x: 0.23140994, y: -0.56733286, z: 0.17014453, w: 0.77186894}
     speed: 2
-    m_Value: {x: -0.3804185, y: 0.018252395, z: -0.007594079, w: -0.9246624}
+    m_Value: {x: 0.23164774, y: -0.56613255, z: 0.16978467, w: 0.77266186}
   m_Size:
-    m_Target: 14.956792
+    m_Target: 12.124355
     speed: 2
-    m_Value: 14.956792
+    m_Value: 12.124355
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
-    m_Speed: 0.607
-    m_SpeedNormalized: 0.29999998
+    m_Speed: 0.06969994
+    m_SpeedNormalized: 0.029999973
     m_SpeedMin: 0.01
     m_SpeedMax: 2
     m_EasingEnabled: 1
@@ -688,7 +688,7 @@ MonoBehaviour:
     oldSplitSize: 6
   m_Recording: 1
   m_ActiveNativePlatformSupportModuleName: 
-  m_SelectedModuleIndex: -1
+  m_SelectedModuleIndex: 0
   m_Modules:
   - id: 0
   - id: 1
@@ -1510,7 +1510,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -87760
+  m_LastSelectedObjectID: 15960
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1539,9 +1539,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ba0d0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 52fbffff
+      m_ExpandedIDs: a8baffff08c0ffff56c0ffff2ac1ffff52fbffff523e0000a8470000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1603,22 +1603,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Modules/Procedure Generation/Scripts
+    - Assets/Modules/Procedure Generation/Materials
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Modules/Procedure Generation/Scripts
+  - Assets/Modules/Procedure Generation/Materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\GitLabRepository\Procedural-generation\Use Procedural generation
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b43e0000
-    m_LastClickedID: 16052
-    m_ExpandedIDs: 00000000a23e0000a43e0000ac3e0000ae3e000000ca9a3b
+    m_SelectedIDs: b23e0000
+    m_LastClickedID: 16050
+    m_ExpandedIDs: 00000000a23e0000a43e0000a63e0000a83e00005642000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1646,7 +1646,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a23e0000a43e0000
+    m_ExpandedIDs: 00000000a23e0000a43e0000a63e0000a83e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
