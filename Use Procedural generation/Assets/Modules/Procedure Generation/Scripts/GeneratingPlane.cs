@@ -54,7 +54,7 @@ public class GeneratingPlane : MonoBehaviour
         _triangles = new int[Size * Size * 6];
         _uvs = new Vector2[_vertices.Length];
 
-        float y = transform.position.y;
+        float y = 0;
 
         for (int z = 0, i = 0; z <= Size; z++)
         {
