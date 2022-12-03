@@ -1,14 +1,18 @@
 using UnityEngine;
 using NaughtyAttributes;
+using System.Collections.Generic;
 
 public class GeneratingPlane : MonoBehaviour
 {
     public int Size = 0;
+    private List<int> _trianglesIgnore = new List<int>();
+
     [SerializeField] private Material _material;
     [SerializeField] private float _offcetPosVertices;
 
     private Mesh _mesh;
     private Vector3[] _vertices;
+
     private int[] _triangles;
 
     private MeshFilter _meshFilter;
@@ -48,6 +52,21 @@ public class GeneratingPlane : MonoBehaviour
         GeneratePlane();
     }
 
+    public bool IsVertexIgnore(int vertex)
+    {
+        foreach(int triangle in _trianglesIgnore)
+        {
+            int vertex1 = _triangles[triangle * 3 + 0];
+            int vertex2 = _triangles[triangle * 3 + 1];
+            int vertex3 = _triangles[triangle * 3 + 2];
+            if(vertex == vertex1 || vertex == vertex2 || vertex == vertex3)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     private void GeneratePlane()
     {
         _vertices = new Vector3[(Size + 1) * (Size + 1)];
@@ -79,14 +98,39 @@ public class GeneratingPlane : MonoBehaviour
             }
         }
         gameObject.AddComponent<MeshCollider>();
+        CreateIgnoreVertices(Size);
     }
 
-    void UpdateMesh()
+    private void UpdateMesh()
     {
         _mesh.vertices = _vertices;
         _mesh.triangles = _triangles;
         _mesh.uv = _uvs;
         _mesh.RecalculateNormals();
+    }
+
+    private void CreateIgnoreVertices(int size)
+    {
+        _trianglesIgnore.Clear();
+
+        for (int i = 0; i < size * size * 2; i++)
+        {
+            if(i <= size * 2 - 1)
+            {
+                _trianglesIgnore.Add(i);
+            }
+            else if (i >= ((size * size * 2 - 1) - (size * 2 - 1)))
+            {
+                _trianglesIgnore.Add(i);
+            }
+            else if (i == (Mathf.Round(i / (size * 2)) * size * 2) 
+                || i == (Mathf.Round(i / (size * 2)) * size * 2) + 1
+                || i == (Mathf.Round(i / (size * 2)) * size * 2) + size * 2 - 2
+                || i == (Mathf.Round(i / (size * 2)) * size * 2) + size * 2 - 1)
+            {
+                _trianglesIgnore.Add(i);
+            }
+        }
     }
 
     private void TestPlane()
