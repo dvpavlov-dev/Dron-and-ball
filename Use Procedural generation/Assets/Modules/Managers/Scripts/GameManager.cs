@@ -1,25 +1,23 @@
 using UnityEngine;
-using NaughtyAttributes;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject[] ProcedureFloors;
+    public static GameManager Instance;
 
-    [Button ("Reset vertices")]
-    public void ResetVertices()
+    private void Awake()
     {
-        ProcedureFloors = GameObject.FindGameObjectsWithTag("Procedure Floor");
-        foreach (GameObject Floor in ProcedureFloors)
-        {
-            Mesh mesh = Floor.GetComponent<MeshCollider>().sharedMesh;
-            Vector3[] vertices = new Vector3[mesh.vertices.Length];
+        Instance = this;
+    }
 
-            for(int i = 0; i < mesh.vertices.Length; i++)
-            {
-                vertices[i] = new Vector3(0, 0, 0);
-            }
-            mesh.vertices = vertices;
-            mesh.RecalculateNormals();
+    public void Win()
+    {
+        if (!LevelManager.Instance.IsLevelsEnd())
+        {
+            LevelManager.Instance.ChangeLevel();
+        }
+        else
+        {
+            LevelManager.Instance.EndGame();
         }
     }
 }
