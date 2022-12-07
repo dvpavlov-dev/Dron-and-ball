@@ -8,6 +8,8 @@ public class RayCastManipulator : MonoBehaviour
     public LimitsData LocalLimits;
     public LimitsData WorldLimits;
     public enum WhichWay {up, down};
+    public float _hitDistance { private set; get; }
+
     private Mesh mesh;
     private Vector3[] vertices;
     private int[] triangles;
@@ -47,6 +49,7 @@ public class RayCastManipulator : MonoBehaviour
             vertices = mesh.vertices;
             triangles = mesh.triangles;
             PlaneData = hit.collider.gameObject.GetComponent<GeneratingPlane>();
+            _hitDistance = hit.distance;
 
             float tmpChangeHeightMagnitude = ChangeHeightMagnitude;
             switch (_way)
