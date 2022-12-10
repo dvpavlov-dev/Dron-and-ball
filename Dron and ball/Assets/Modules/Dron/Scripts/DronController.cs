@@ -41,7 +41,6 @@ public class DronController : MonoBehaviour
 
         if(!Input.GetKey(KeyCode.Mouse0) && !Input.GetKey(KeyCode.Mouse1))
         {
-            Debug.Log("no click");
             OnOffEffectsAndSounds(false, "");
         }
     }

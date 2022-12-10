@@ -5,6 +5,9 @@ using System.Collections.Generic;
 public class GeneratingPlane : MonoBehaviour
 {
     public int Size = 0;
+    public Gradient ColorHeight;
+    public MeshRenderer MeshRender { get; private set; }
+
     private List<int> _trianglesIgnore = new List<int>();
 
     [SerializeField] private Material _material;
@@ -12,12 +15,10 @@ public class GeneratingPlane : MonoBehaviour
 
     private Mesh _mesh;
     private Vector3[] _vertices;
-
     private int[] _triangles;
-
     private MeshFilter _meshFilter;
-    private MeshRenderer _meshRender;
     private Vector2[] _uvs;
+    Color[] ColorLevels;
 
     private void Start()
     {
@@ -45,10 +46,10 @@ public class GeneratingPlane : MonoBehaviour
         _mesh = new Mesh();
 
         _meshFilter = gameObject.AddComponent<MeshFilter>();
-        _meshRender = gameObject.AddComponent<MeshRenderer>();
+        MeshRender = gameObject.AddComponent<MeshRenderer>();
 
         _meshFilter.mesh = _mesh;
-        _meshRender.material = _material;
+        MeshRender.material = _material;
         GeneratePlane();
     }
 
@@ -83,6 +84,8 @@ public class GeneratingPlane : MonoBehaviour
                 _uvs[i] = new Vector2((float)x/Size, (float)y / Size);
             }
         }
+
+        DrawMesh();
 
         for (int z = 0, triangleIndex = 0, VertIndex = 0; z < Size; z++, VertIndex++)
         {
@@ -131,6 +134,29 @@ public class GeneratingPlane : MonoBehaviour
                 _trianglesIgnore.Add(i);
             }
         }
+    }
+
+    void DrawMesh()
+    {
+        ColorLevels = new Color[_vertices.Length];
+        _uvs = new Vector2[_vertices.Length];
+        for (int v = 0; v < _vertices.Length; v++)
+        {
+            ColorLevels[v] = ColorHeight.Evaluate(0.5f);
+        }
+
+        Texture2D tx2d = new Texture2D(Size, Size);
+        for (int x = 0, i = 0; x <= Size; x++)
+        {
+            for (int y = 0; y <= Size; y++)
+            {
+                _uvs[i] = new Vector2((float)x / Size, (float)y / Size);
+                tx2d.SetPixel(x, y, ColorLevels[i]);
+                i++;
+            }
+        }
+        tx2d.Apply();
+        MeshRender.sharedMaterial.mainTexture = tx2d;
     }
 
     private void TestPlane()
